@@ -20,12 +20,6 @@ buildNumber.properties
 quarkus-app/output/
 
 # Core business logic - MVP (never exposed)
-/core/src/main/java/com/datasabai/services/scrapper/core/scraper/
-/core/src/main/java/com/datasabai/services/scrapper/core/converter/
-/core/src/main/java/com/datasabai/services/scrapper/core/beanio/
-/core/src/main/java/com/datasabai/services/scrapper/core/publisher/
-/core/src/main/java/com/datasabai/services/scrapper/core/ScrapperService.java
-/core/src/test/
-/core/src/main/java/com/datasabai/services/scrapper/core/converter/EdifactEnvelopeSchemaBuilder.java
+/core/src/
 # Local screenshots (not committed)
 /screenshots/
