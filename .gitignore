@@ -1,0 +1,31 @@
+target/
+.flattened-pom.xml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# https://maven.apache.org/wrapper/#usage-without-binary-jar
+.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse m2e generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+/src/
+quarkus-app/output/
+
+# Core business logic - MVP (never exposed)
+/core/src/main/java/com/datasabai/services/scrapper/core/scraper/
+/core/src/main/java/com/datasabai/services/scrapper/core/converter/
+/core/src/main/java/com/datasabai/services/scrapper/core/beanio/
+/core/src/main/java/com/datasabai/services/scrapper/core/publisher/
+/core/src/main/java/com/datasabai/services/scrapper/core/ScrapperService.java
+/core/src/test/
+/core/src/main/java/com/datasabai/services/scrapper/core/converter/EdifactEnvelopeSchemaBuilder.java
+# Local screenshots (not committed)
+/screenshots/

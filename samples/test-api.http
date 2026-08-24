@@ -1,0 +1,54 @@
+### EDI Spec Scrapper - API tests (VS Code "REST Client" extension)
+### App must run on :9010. Scraping steps are LIVE and slow.
+
+@base = http://localhost:9010/api
+
+### 1. Health
+GET {{base}}/scrapper/health
+
+### 2. Config schema
+GET {{base}}/scrapper/config-schema
+
+### 3a. EDIFACT revisions
+GET {{base}}/edifact/revisions
+
+### 3b. Message types for a revision (replace D96A with any revision from 3a)
+GET {{base}}/edifact/message-types/D96A
+
+### 3c. X12 revisions
+GET {{base}}/x12/revisions
+
+### 3d. X12 transaction sets (replace 4010 with any revision from 3c)
+GET {{base}}/x12/transaction-sets/4010
+
+### 4. SSE scrape - watch progress events stream in the response pane
+GET {{base}}/scrape?standard=EDIFACT&revision=D96A&messageType=INVOIC
+
+### 5. Execute scrape via POST (returns spec + JSON Schema + BeanIO XML in one shot)
+POST {{base}}/scrapper/execute
+Content-Type: application/json
+
+{
+  "standard": "EDIFACT",
+  "revision": "D96A",
+  "messageType": "INVOIC"
+}
+
+### 6. Get previously scraped result as JSON Schema
+GET {{base}}/result/D96A/INVOIC?format=jsonschema
+
+### 6b. Same result as BeanIO XML mapping
+GET {{base}}/result/D96A/INVOIC?format=beanio
+
+### 6c. Same result in canonical form
+GET {{base}}/result/D96A/INVOIC
+
+### 7. Publish to Azure DevOps (requires ~/.datasabai config - expect failure locally)
+POST {{base}}/publish
+Content-Type: application/json
+
+{
+  "standard": "EDIFACT",
+  "revision": "D96A",
+  "messageType": "INVOIC"
+}

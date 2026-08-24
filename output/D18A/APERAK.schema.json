@@ -1,0 +1,1446 @@
+{
+  "$schema" : "https://json-schema.org/draft-07/schema#",
+  "title" : "EDIFACT_D18A_APERAK",
+  "description" : "EDIFACT D18A APERAK",
+  "x-schemaMetadata" : {
+    "version" : "1.0",
+    "representation" : "FLAT",
+    "specification" : "edifact",
+    "specVersion" : "D18A",
+    "code" : "APERAK",
+    "documentType" : "EDI",
+    "modelName" : "EDIFACT_D18A_APERAK",
+    "category" : "standard",
+    "aliases" : {
+      "messageType" : "APERAK",
+      "revision" : "D18A"
+    },
+    "tags" : [ "edifact", "d18a", "aperak" ],
+    "summary" : "EDIFACT D18A APERAK"
+  },
+  "type" : "object",
+  "properties" : {
+    "unbInterchangeHeader" : {
+      "$ref" : "#/$defs/Unb_InterchangeHeader",
+      "description" : "UNB (1..1)"
+    },
+    "unhMessageHeader" : {
+      "$ref" : "#/$defs/Unh_MessageHeader",
+      "description" : "UNH (1..1)"
+    },
+    "bgmBeginningOfMessage" : {
+      "$ref" : "#/$defs/Bgm_BeginningOfMessage",
+      "description" : "BGM (1..1)"
+    },
+    "dtmDateTimePeriod" : {
+      "type" : "array",
+      "description" : "DTM (0..9)",
+      "items" : {
+        "$ref" : "#/$defs/Dtm_DateTimePeriod"
+      },
+      "minItems" : 0,
+      "maxItems" : 9
+    },
+    "ftxFreeText" : {
+      "type" : "array",
+      "description" : "FTX (0..9)",
+      "items" : {
+        "$ref" : "#/$defs/Ftx_FreeText"
+      },
+      "minItems" : 0,
+      "maxItems" : 9
+    },
+    "cntControlTotal" : {
+      "type" : "array",
+      "description" : "CNT (0..9)",
+      "items" : {
+        "$ref" : "#/$defs/Cnt_ControlTotal"
+      },
+      "minItems" : 0,
+      "maxItems" : 9
+    },
+    "sg1" : {
+      "type" : "array",
+      "description" : "Sg1 (0..99)",
+      "items" : {
+        "$ref" : "#/$defs/Sg1"
+      },
+      "minItems" : 0,
+      "maxItems" : 99
+    },
+    "sg2" : {
+      "type" : "array",
+      "description" : "Sg2 (0..9)",
+      "items" : {
+        "$ref" : "#/$defs/Sg2"
+      },
+      "minItems" : 0,
+      "maxItems" : 9
+    },
+    "sg3" : {
+      "type" : "array",
+      "description" : "Sg3 (0..9)",
+      "items" : {
+        "$ref" : "#/$defs/Sg3"
+      },
+      "minItems" : 0,
+      "maxItems" : 9
+    },
+    "sg4" : {
+      "type" : "array",
+      "description" : "Sg4 (0..99999)",
+      "items" : {
+        "$ref" : "#/$defs/Sg4"
+      },
+      "minItems" : 0,
+      "maxItems" : 99999
+    },
+    "untMessageTrailer" : {
+      "$ref" : "#/$defs/Unt_MessageTrailer",
+      "description" : "UNT (1..1)"
+    },
+    "unzInterchangeTrailer" : {
+      "$ref" : "#/$defs/Unz_InterchangeTrailer",
+      "description" : "UNZ (1..1)"
+    }
+  },
+  "required" : [ "unbInterchangeHeader", "unhMessageHeader", "bgmBeginningOfMessage", "untMessageTrailer", "unzInterchangeTrailer" ],
+  "$defs" : {
+    "Unb_InterchangeHeader" : {
+      "type" : "object",
+      "description" : "INTERCHANGE HEADER",
+      "x-segment-id" : "UNB",
+      "x-element-order" : [ "s001SyntaxIdentifier01", "s002InterchangeSender02", "s003InterchangeRecipient03", "s004DateAndTimeOfPreparation04", "e0020InterchangeControlReference05", "s005RecipientReferencePasswordDetails06", "e0026ApplicationReference07", "e0029ProcessingPriorityCode08", "e0031AcknowledgementRequest09", "e0032InterchangeAgreementIdentifier10", "e0035TestIndicator11" ],
+      "properties" : {
+        "s001SyntaxIdentifier01" : {
+          "$ref" : "#/$defs/S001_SyntaxIdentifier",
+          "x-position" : "010"
+        },
+        "s002InterchangeSender02" : {
+          "$ref" : "#/$defs/S002_InterchangeSender",
+          "x-position" : "020"
+        },
+        "s003InterchangeRecipient03" : {
+          "$ref" : "#/$defs/S003_InterchangeRecipient",
+          "x-position" : "030"
+        },
+        "s004DateAndTimeOfPreparation04" : {
+          "$ref" : "#/$defs/S004_DateAndTimeOfPreparation",
+          "x-position" : "040"
+        },
+        "e0020InterchangeControlReference05" : {
+          "type" : "string",
+          "description" : "INTERCHANGE CONTROL REFERENCE",
+          "maxLength" : 14,
+          "x-position" : "050"
+        },
+        "s005RecipientReferencePasswordDetails06" : {
+          "$ref" : "#/$defs/S005_RecipientReferencePasswordDetails",
+          "x-position" : "060"
+        },
+        "e0026ApplicationReference07" : {
+          "type" : "string",
+          "description" : "APPLICATION REFERENCE",
+          "maxLength" : 14,
+          "x-position" : "070"
+        },
+        "e0029ProcessingPriorityCode08" : {
+          "type" : "string",
+          "description" : "PROCESSING PRIORITY CODE",
+          "maxLength" : 1,
+          "x-position" : "080"
+        },
+        "e0031AcknowledgementRequest09" : {
+          "type" : "string",
+          "description" : "ACKNOWLEDGEMENT REQUEST",
+          "maxLength" : 1,
+          "x-position" : "090"
+        },
+        "e0032InterchangeAgreementIdentifier10" : {
+          "type" : "string",
+          "description" : "INTERCHANGE AGREEMENT IDENTIFIER",
+          "maxLength" : 35,
+          "x-position" : "100"
+        },
+        "e0035TestIndicator11" : {
+          "type" : "string",
+          "description" : "TEST INDICATOR",
+          "maxLength" : 1,
+          "x-position" : "110"
+        }
+      },
+      "required" : [ "s001SyntaxIdentifier01", "s002InterchangeSender02", "s003InterchangeRecipient03", "s004DateAndTimeOfPreparation04", "e0020InterchangeControlReference05" ]
+    },
+    "Unh_MessageHeader" : {
+      "type" : "object",
+      "description" : "MESSAGE HEADER",
+      "x-segment-id" : "UNH",
+      "x-element-order" : [ "e0062MessageReferenceNumber01", "s009MessageIdentifier02", "e0068CommonAccessReference03", "s010StatusOfTheTransfer04", "s016MessageSubsetIdentification05", "s017MessageImplementationGuidelineIdentification06", "s018ScenarioIdentification07" ],
+      "properties" : {
+        "e0062MessageReferenceNumber01" : {
+          "type" : "string",
+          "description" : "MESSAGE REFERENCE NUMBER",
+          "maxLength" : 14,
+          "x-position" : "010"
+        },
+        "s009MessageIdentifier02" : {
+          "$ref" : "#/$defs/S009_MessageIdentifier",
+          "x-position" : "020"
+        },
+        "e0068CommonAccessReference03" : {
+          "type" : "string",
+          "description" : "COMMON ACCESS REFERENCE",
+          "maxLength" : 35,
+          "x-position" : "030"
+        },
+        "s010StatusOfTheTransfer04" : {
+          "$ref" : "#/$defs/S010_StatusOfTheTransfer",
+          "x-position" : "040"
+        },
+        "s016MessageSubsetIdentification05" : {
+          "$ref" : "#/$defs/S016_MessageSubsetIdentification",
+          "x-position" : "050"
+        },
+        "s017MessageImplementationGuidelineIdentification06" : {
+          "$ref" : "#/$defs/S017_MessageImplementationGuidelineIdentification",
+          "x-position" : "060"
+        },
+        "s018ScenarioIdentification07" : {
+          "$ref" : "#/$defs/S018_ScenarioIdentification",
+          "x-position" : "070"
+        }
+      },
+      "required" : [ "e0062MessageReferenceNumber01", "s009MessageIdentifier02" ]
+    },
+    "Bgm_BeginningOfMessage" : {
+      "type" : "object",
+      "description" : "BEGINNING OF MESSAGE",
+      "x-segment-id" : "BGM",
+      "x-element-order" : [ "c002DocumentMessageName01", "c106DocumentMessageIdentification02", "e1225MessageFunctionCode03", "e4343ResponseTypeCode04", "e1373DocumentStatusCode05", "e3453LanguageNameCode06" ],
+      "properties" : {
+        "c002DocumentMessageName01" : {
+          "$ref" : "#/$defs/C002_DocumentMessageName",
+          "x-position" : "010"
+        },
+        "c106DocumentMessageIdentification02" : {
+          "$ref" : "#/$defs/C106_DocumentMessageIdentification",
+          "x-position" : "020"
+        },
+        "e1225MessageFunctionCode03" : {
+          "type" : "string",
+          "description" : "MESSAGE FUNCTION CODE",
+          "maxLength" : 3,
+          "x-position" : "030"
+        },
+        "e4343ResponseTypeCode04" : {
+          "type" : "string",
+          "description" : "RESPONSE TYPE CODE",
+          "maxLength" : 3,
+          "x-position" : "040"
+        },
+        "e1373DocumentStatusCode05" : {
+          "type" : "string",
+          "description" : "DOCUMENT STATUS CODE",
+          "maxLength" : 3,
+          "x-position" : "050"
+        },
+        "e3453LanguageNameCode06" : {
+          "type" : "string",
+          "description" : "LANGUAGE NAME CODE",
+          "maxLength" : 3,
+          "x-position" : "060"
+        }
+      }
+    },
+    "Dtm_DateTimePeriod" : {
+      "type" : "object",
+      "description" : "DATE/TIME/PERIOD",
+      "x-segment-id" : "DTM",
+      "x-element-order" : [ "c507DateTimePeriod01" ],
+      "properties" : {
+        "c507DateTimePeriod01" : {
+          "$ref" : "#/$defs/C507_DateTimePeriod",
+          "x-position" : "010"
+        }
+      },
+      "required" : [ "c507DateTimePeriod01" ]
+    },
+    "Ftx_FreeText" : {
+      "type" : "object",
+      "description" : "FREE TEXT",
+      "x-segment-id" : "FTX",
+      "x-element-order" : [ "e4451TextSubjectCodeQualifier01", "e4453FreeTextFunctionCode02", "c107TextReference03", "c108TextLiteral04", "e3453LanguageNameCode05", "e4447FreeTextFormatCode06" ],
+      "properties" : {
+        "e4451TextSubjectCodeQualifier01" : {
+          "type" : "string",
+          "description" : "TEXT SUBJECT CODE QUALIFIER",
+          "maxLength" : 3,
+          "x-position" : "010"
+        },
+        "e4453FreeTextFunctionCode02" : {
+          "type" : "string",
+          "description" : "FREE TEXT FUNCTION CODE",
+          "maxLength" : 3,
+          "x-position" : "020"
+        },
+        "c107TextReference03" : {
+          "$ref" : "#/$defs/C107_TextReference",
+          "x-position" : "030"
+        },
+        "c108TextLiteral04" : {
+          "$ref" : "#/$defs/C108_TextLiteral",
+          "x-position" : "040"
+        },
+        "e3453LanguageNameCode05" : {
+          "type" : "string",
+          "description" : "LANGUAGE NAME CODE",
+          "maxLength" : 3,
+          "x-position" : "050"
+        },
+        "e4447FreeTextFormatCode06" : {
+          "type" : "string",
+          "description" : "FREE TEXT FORMAT CODE",
+          "maxLength" : 3,
+          "x-position" : "060"
+        }
+      },
+      "required" : [ "e4451TextSubjectCodeQualifier01" ]
+    },
+    "Cnt_ControlTotal" : {
+      "type" : "object",
+      "description" : "CONTROL TOTAL",
+      "x-segment-id" : "CNT",
+      "x-element-order" : [ "c270Control01" ],
+      "properties" : {
+        "c270Control01" : {
+          "$ref" : "#/$defs/C270_Control",
+          "x-position" : "010"
+        }
+      },
+      "required" : [ "c270Control01" ]
+    },
+    "Sg1" : {
+      "type" : "object",
+      "description" : "Group: SG1",
+      "x-group" : {
+        "level" : 0,
+        "minOccurs" : 0,
+        "maxOccurs" : 99
+      },
+      "properties" : {
+        "docDocumentMessageDetails" : {
+          "$ref" : "#/$defs/Doc_DocumentMessageDetails",
+          "description" : "DOC (1..1)"
+        },
+        "dtmDateTimePeriod" : {
+          "type" : "array",
+          "description" : "DTM (0..99)",
+          "items" : {
+            "$ref" : "#/$defs/Dtm_DateTimePeriod"
+          },
+          "minItems" : 0,
+          "maxItems" : 99
+        }
+      },
+      "required" : [ "docDocumentMessageDetails" ]
+    },
+    "Doc_DocumentMessageDetails" : {
+      "type" : "object",
+      "description" : "DOCUMENT/MESSAGE DETAILS",
+      "x-segment-id" : "DOC",
+      "x-element-order" : [ "c002DocumentMessageName01", "c503DocumentMessageDetails02", "e3153CommunicationMediumTypeCode03", "e1220DocumentCopiesRequiredQuantity04", "e1218DocumentOriginalsRequiredQuantity05" ],
+      "properties" : {
+        "c002DocumentMessageName01" : {
+          "$ref" : "#/$defs/C002_DocumentMessageName",
+          "x-position" : "010"
+        },
+        "c503DocumentMessageDetails02" : {
+          "$ref" : "#/$defs/C503_DocumentMessageDetails",
+          "x-position" : "020"
+        },
+        "e3153CommunicationMediumTypeCode03" : {
+          "type" : "string",
+          "description" : "COMMUNICATION MEDIUM TYPE CODE",
+          "maxLength" : 3,
+          "x-position" : "030"
+        },
+        "e1220DocumentCopiesRequiredQuantity04" : {
+          "type" : "string",
+          "description" : "DOCUMENT COPIES REQUIRED QUANTITY",
+          "maxLength" : 2,
+          "x-position" : "040"
+        },
+        "e1218DocumentOriginalsRequiredQuantity05" : {
+          "type" : "string",
+          "description" : "DOCUMENT ORIGINALS REQUIRED QUANTITY",
+          "maxLength" : 2,
+          "x-position" : "050"
+        }
+      },
+      "required" : [ "c002DocumentMessageName01" ]
+    },
+    "Sg2" : {
+      "type" : "object",
+      "description" : "Group: SG2",
+      "x-group" : {
+        "level" : 0,
+        "minOccurs" : 0,
+        "maxOccurs" : 9
+      },
+      "properties" : {
+        "rffReference" : {
+          "$ref" : "#/$defs/Rff_Reference",
+          "description" : "RFF (1..1)"
+        },
+        "dtmDateTimePeriod" : {
+          "type" : "array",
+          "description" : "DTM (0..9)",
+          "items" : {
+            "$ref" : "#/$defs/Dtm_DateTimePeriod"
+          },
+          "minItems" : 0,
+          "maxItems" : 9
+        }
+      },
+      "required" : [ "rffReference" ]
+    },
+    "Rff_Reference" : {
+      "type" : "object",
+      "description" : "REFERENCE",
+      "x-segment-id" : "RFF",
+      "x-element-order" : [ "c506Reference01" ],
+      "properties" : {
+        "c506Reference01" : {
+          "$ref" : "#/$defs/C506_Reference",
+          "x-position" : "010"
+        }
+      },
+      "required" : [ "c506Reference01" ]
+    },
+    "Sg3" : {
+      "type" : "object",
+      "description" : "Group: SG3",
+      "x-group" : {
+        "level" : 0,
+        "minOccurs" : 0,
+        "maxOccurs" : 9
+      },
+      "properties" : {
+        "nadNameAndAddress" : {
+          "$ref" : "#/$defs/Nad_NameAndAddress",
+          "description" : "NAD (1..1)"
+        },
+        "ctaContactInformation" : {
+          "type" : "array",
+          "description" : "CTA (0..9)",
+          "items" : {
+            "$ref" : "#/$defs/Cta_ContactInformation"
+          },
+          "minItems" : 0,
+          "maxItems" : 9
+        },
+        "comCommunicationContact" : {
+          "type" : "array",
+          "description" : "COM (0..9)",
+          "items" : {
+            "$ref" : "#/$defs/Com_CommunicationContact"
+          },
+          "minItems" : 0,
+          "maxItems" : 9
+        }
+      },
+      "required" : [ "nadNameAndAddress" ]
+    },
+    "Nad_NameAndAddress" : {
+      "type" : "object",
+      "description" : "NAME AND ADDRESS",
+      "x-segment-id" : "NAD",
+      "x-element-order" : [ "e3035PartyFunctionCodeQualifier01", "c082PartyIdentificationDetails02", "c058NameAndAddress03", "c080PartyName04", "c059Street05", "e3164CityName06", "c819CountrySubdivisionDetails07", "e3251PostalIdentificationCode08", "e3207CountryIdentifier09" ],
+      "properties" : {
+        "e3035PartyFunctionCodeQualifier01" : {
+          "type" : "string",
+          "description" : "PARTY FUNCTION CODE QUALIFIER",
+          "maxLength" : 3,
+          "x-position" : "010"
+        },
+        "c082PartyIdentificationDetails02" : {
+          "$ref" : "#/$defs/C082_PartyIdentificationDetails",
+          "x-position" : "020"
+        },
+        "c058NameAndAddress03" : {
+          "$ref" : "#/$defs/C058_NameAndAddress",
+          "x-position" : "030"
+        },
+        "c080PartyName04" : {
+          "$ref" : "#/$defs/C080_PartyName",
+          "x-position" : "040"
+        },
+        "c059Street05" : {
+          "$ref" : "#/$defs/C059_Street",
+          "x-position" : "050"
+        },
+        "e3164CityName06" : {
+          "type" : "string",
+          "description" : "CITY NAME",
+          "maxLength" : 35,
+          "x-position" : "060"
+        },
+        "c819CountrySubdivisionDetails07" : {
+          "$ref" : "#/$defs/C819_CountrySubdivisionDetails",
+          "x-position" : "070"
+        },
+        "e3251PostalIdentificationCode08" : {
+          "type" : "string",
+          "description" : "POSTAL IDENTIFICATION CODE",
+          "maxLength" : 17,
+          "x-position" : "080"
+        },
+        "e3207CountryIdentifier09" : {
+          "type" : "string",
+          "description" : "COUNTRY IDENTIFIER",
+          "maxLength" : 3,
+          "x-position" : "090"
+        }
+      },
+      "required" : [ "e3035PartyFunctionCodeQualifier01" ]
+    },
+    "Cta_ContactInformation" : {
+      "type" : "object",
+      "description" : "CONTACT INFORMATION",
+      "x-segment-id" : "CTA",
+      "x-element-order" : [ "e3139ContactFunctionCode01", "c056ContactDetails02" ],
+      "properties" : {
+        "e3139ContactFunctionCode01" : {
+          "type" : "string",
+          "description" : "CONTACT FUNCTION CODE",
+          "maxLength" : 3,
+          "x-position" : "010"
+        },
+        "c056ContactDetails02" : {
+          "$ref" : "#/$defs/C056_ContactDetails",
+          "x-position" : "020"
+        }
+      }
+    },
+    "Com_CommunicationContact" : {
+      "type" : "object",
+      "description" : "COMMUNICATION CONTACT",
+      "x-segment-id" : "COM",
+      "x-element-order" : [ "c076CommunicationContact01" ],
+      "properties" : {
+        "c076CommunicationContact01" : {
+          "$ref" : "#/$defs/C076_CommunicationContact",
+          "x-position" : "010"
+        }
+      },
+      "required" : [ "c076CommunicationContact01" ]
+    },
+    "Sg4" : {
+      "type" : "object",
+      "description" : "Group: SG4",
+      "x-group" : {
+        "level" : 0,
+        "minOccurs" : 0,
+        "maxOccurs" : 99999
+      },
+      "properties" : {
+        "ercApplicationErrorInformation" : {
+          "$ref" : "#/$defs/Erc_ApplicationErrorInformation",
+          "description" : "ERC (1..1)"
+        },
+        "ftxFreeText" : {
+          "$ref" : "#/$defs/Ftx_FreeText",
+          "description" : "FTX (0..1)"
+        },
+        "sg5" : {
+          "type" : "array",
+          "description" : "Sg5 (0..9)",
+          "items" : {
+            "$ref" : "#/$defs/Sg5"
+          },
+          "minItems" : 0,
+          "maxItems" : 9
+        }
+      },
+      "required" : [ "ercApplicationErrorInformation" ]
+    },
+    "Erc_ApplicationErrorInformation" : {
+      "type" : "object",
+      "description" : "APPLICATION ERROR INFORMATION",
+      "x-segment-id" : "ERC",
+      "x-element-order" : [ "c901ApplicationErrorDetail01" ],
+      "properties" : {
+        "c901ApplicationErrorDetail01" : {
+          "$ref" : "#/$defs/C901_ApplicationErrorDetail",
+          "x-position" : "010"
+        }
+      },
+      "required" : [ "c901ApplicationErrorDetail01" ]
+    },
+    "Sg5" : {
+      "type" : "object",
+      "description" : "Group: SG5",
+      "x-group" : {
+        "parent" : "Sg4",
+        "level" : 1,
+        "minOccurs" : 0,
+        "maxOccurs" : 9
+      },
+      "properties" : {
+        "rffReference" : {
+          "$ref" : "#/$defs/Rff_Reference",
+          "description" : "RFF (1..1)"
+        },
+        "ftxFreeText" : {
+          "type" : "array",
+          "description" : "FTX (0..9)",
+          "items" : {
+            "$ref" : "#/$defs/Ftx_FreeText"
+          },
+          "minItems" : 0,
+          "maxItems" : 9
+        }
+      },
+      "required" : [ "rffReference" ]
+    },
+    "Unt_MessageTrailer" : {
+      "type" : "object",
+      "description" : "MESSAGE TRAILER",
+      "x-segment-id" : "UNT",
+      "x-element-order" : [ "e0074NumberOfSegmentsInAMessage01", "e0062MessageReferenceNumber02" ],
+      "properties" : {
+        "e0074NumberOfSegmentsInAMessage01" : {
+          "type" : "string",
+          "description" : "NUMBER OF SEGMENTS IN A MESSAGE",
+          "maxLength" : 10,
+          "x-position" : "010"
+        },
+        "e0062MessageReferenceNumber02" : {
+          "type" : "string",
+          "description" : "MESSAGE REFERENCE NUMBER",
+          "maxLength" : 14,
+          "x-position" : "020"
+        }
+      },
+      "required" : [ "e0074NumberOfSegmentsInAMessage01", "e0062MessageReferenceNumber02" ]
+    },
+    "Unz_InterchangeTrailer" : {
+      "type" : "object",
+      "description" : "INTERCHANGE TRAILER",
+      "x-segment-id" : "UNZ",
+      "x-element-order" : [ "e0036InterchangeControlCount01", "e0020InterchangeControlReference02" ],
+      "properties" : {
+        "e0036InterchangeControlCount01" : {
+          "type" : "string",
+          "description" : "INTERCHANGE CONTROL COUNT",
+          "maxLength" : 6,
+          "x-position" : "010"
+        },
+        "e0020InterchangeControlReference02" : {
+          "type" : "string",
+          "description" : "INTERCHANGE CONTROL REFERENCE",
+          "maxLength" : 14,
+          "x-position" : "020"
+        }
+      },
+      "required" : [ "e0036InterchangeControlCount01", "e0020InterchangeControlReference02" ]
+    },
+    "S001_SyntaxIdentifier" : {
+      "type" : "object",
+      "description" : "SYNTAX IDENTIFIER",
+      "properties" : {
+        "e0001SyntaxIdentifier01" : {
+          "type" : "string",
+          "description" : "Syntax identifier",
+          "maxLength" : 4,
+          "x-position" : "001"
+        },
+        "e0002SyntaxVersionNumber02" : {
+          "type" : "string",
+          "description" : "Syntax version number",
+          "maxLength" : 1,
+          "x-position" : "002"
+        },
+        "e0080ServiceCodeListDirectoryVersionNumber03" : {
+          "type" : "string",
+          "description" : "Service code list directory version number",
+          "maxLength" : 6,
+          "x-position" : "003"
+        },
+        "e0133CharacterEncodingCoded04" : {
+          "type" : "string",
+          "description" : "Character encoding, coded",
+          "maxLength" : 3,
+          "x-position" : "004"
+        },
+        "e0076SyntaxReleaseNumber05" : {
+          "type" : "string",
+          "description" : "Syntax release number",
+          "maxLength" : 2,
+          "x-position" : "005"
+        }
+      },
+      "x-element-order" : [ "e0001SyntaxIdentifier01", "e0002SyntaxVersionNumber02", "e0080ServiceCodeListDirectoryVersionNumber03", "e0133CharacterEncodingCoded04", "e0076SyntaxReleaseNumber05" ],
+      "required" : [ "e0001SyntaxIdentifier01", "e0002SyntaxVersionNumber02" ]
+    },
+    "S002_InterchangeSender" : {
+      "type" : "object",
+      "description" : "INTERCHANGE SENDER",
+      "properties" : {
+        "e0004InterchangeSenderIdentification01" : {
+          "type" : "string",
+          "description" : "Interchange sender identification",
+          "maxLength" : 35,
+          "x-position" : "001"
+        },
+        "e0007IdentificationCodeQualifier02" : {
+          "type" : "string",
+          "description" : "Identification code qualifier",
+          "maxLength" : 4,
+          "x-position" : "002"
+        },
+        "e0008InterchangeSenderInternalIdentification03" : {
+          "type" : "string",
+          "description" : "Interchange sender internal identification",
+          "maxLength" : 35,
+          "x-position" : "003"
+        },
+        "e0042InterchangeSenderInternalSubIdentification04" : {
+          "type" : "string",
+          "description" : "Interchange sender internal sub-identification",
+          "maxLength" : 35,
+          "x-position" : "004"
+        }
+      },
+      "x-element-order" : [ "e0004InterchangeSenderIdentification01", "e0007IdentificationCodeQualifier02", "e0008InterchangeSenderInternalIdentification03", "e0042InterchangeSenderInternalSubIdentification04" ],
+      "required" : [ "e0004InterchangeSenderIdentification01" ]
+    },
+    "S003_InterchangeRecipient" : {
+      "type" : "object",
+      "description" : "INTERCHANGE RECIPIENT",
+      "properties" : {
+        "e0010InterchangeRecipientIdentification01" : {
+          "type" : "string",
+          "description" : "Interchange recipient identification",
+          "maxLength" : 35,
+          "x-position" : "001"
+        },
+        "e0007IdentificationCodeQualifier02" : {
+          "type" : "string",
+          "description" : "Identification code qualifier",
+          "maxLength" : 4,
+          "x-position" : "002"
+        },
+        "e0014InterchangeRecipientInternalIdentification03" : {
+          "type" : "string",
+          "description" : "Interchange recipient internal identification",
+          "maxLength" : 35,
+          "x-position" : "003"
+        },
+        "e0046InterchangeRecipientInternalSubIdentification04" : {
+          "type" : "string",
+          "description" : "Interchange recipient internal sub-identification",
+          "maxLength" : 35,
+          "x-position" : "004"
+        }
+      },
+      "x-element-order" : [ "e0010InterchangeRecipientIdentification01", "e0007IdentificationCodeQualifier02", "e0014InterchangeRecipientInternalIdentification03", "e0046InterchangeRecipientInternalSubIdentification04" ],
+      "required" : [ "e0010InterchangeRecipientIdentification01" ]
+    },
+    "S004_DateAndTimeOfPreparation" : {
+      "type" : "object",
+      "description" : "DATE AND TIME OF PREPARATION",
+      "properties" : {
+        "e0017Date01" : {
+          "type" : "string",
+          "description" : "Date",
+          "maxLength" : 8,
+          "x-position" : "001"
+        },
+        "e0019Time02" : {
+          "type" : "string",
+          "description" : "Time",
+          "maxLength" : 4,
+          "x-position" : "002"
+        }
+      },
+      "x-element-order" : [ "e0017Date01", "e0019Time02" ],
+      "required" : [ "e0017Date01", "e0019Time02" ]
+    },
+    "S005_RecipientReferencePasswordDetails" : {
+      "type" : "object",
+      "description" : "RECIPIENT REFERENCE/PASSWORD DETAILS",
+      "properties" : {
+        "e0022RecipientReferencePassword01" : {
+          "type" : "string",
+          "description" : "Recipient reference/password",
+          "maxLength" : 14,
+          "x-position" : "001"
+        },
+        "e0025RecipientReferencePasswordQualifier02" : {
+          "type" : "string",
+          "description" : "Recipient reference/password qualifier",
+          "maxLength" : 2,
+          "x-position" : "002"
+        }
+      },
+      "x-element-order" : [ "e0022RecipientReferencePassword01", "e0025RecipientReferencePasswordQualifier02" ],
+      "required" : [ "e0022RecipientReferencePassword01" ]
+    },
+    "S009_MessageIdentifier" : {
+      "type" : "object",
+      "description" : "MESSAGE IDENTIFIER",
+      "properties" : {
+        "e0065MessageType01" : {
+          "type" : "string",
+          "description" : "Message type",
+          "maxLength" : 6,
+          "x-position" : "001"
+        },
+        "e0052MessageVersionNumber02" : {
+          "type" : "string",
+          "description" : "Message version number",
+          "maxLength" : 3,
+          "x-position" : "002"
+        },
+        "e0054MessageReleaseNumber03" : {
+          "type" : "string",
+          "description" : "Message release number",
+          "maxLength" : 3,
+          "x-position" : "003"
+        },
+        "e0051ControllingAgencyCoded04" : {
+          "type" : "string",
+          "description" : "Controlling agency, coded",
+          "maxLength" : 3,
+          "x-position" : "004"
+        },
+        "e0057AssociationAssignedCode05" : {
+          "type" : "string",
+          "description" : "Association assigned code",
+          "maxLength" : 6,
+          "x-position" : "005"
+        },
+        "e0110CodeListDirectoryVersionNumber06" : {
+          "type" : "string",
+          "description" : "Code list directory version number",
+          "maxLength" : 6,
+          "x-position" : "006"
+        },
+        "e0113MessageTypeSubFunctionIdentification07" : {
+          "type" : "string",
+          "description" : "Message type sub-function identification",
+          "maxLength" : 6,
+          "x-position" : "007"
+        }
+      },
+      "x-element-order" : [ "e0065MessageType01", "e0052MessageVersionNumber02", "e0054MessageReleaseNumber03", "e0051ControllingAgencyCoded04", "e0057AssociationAssignedCode05", "e0110CodeListDirectoryVersionNumber06", "e0113MessageTypeSubFunctionIdentification07" ],
+      "required" : [ "e0065MessageType01", "e0052MessageVersionNumber02", "e0054MessageReleaseNumber03", "e0051ControllingAgencyCoded04" ]
+    },
+    "S010_StatusOfTheTransfer" : {
+      "type" : "object",
+      "description" : "STATUS OF THE TRANSFER",
+      "properties" : {
+        "e0070SequenceOfTransfers01" : {
+          "type" : "string",
+          "description" : "Sequence of transfers",
+          "maxLength" : 2,
+          "x-position" : "001"
+        },
+        "e0073FirstAndLastTransfer02" : {
+          "type" : "string",
+          "description" : "First and last transfer",
+          "maxLength" : 1,
+          "x-position" : "002"
+        }
+      },
+      "x-element-order" : [ "e0070SequenceOfTransfers01", "e0073FirstAndLastTransfer02" ],
+      "required" : [ "e0070SequenceOfTransfers01" ]
+    },
+    "S016_MessageSubsetIdentification" : {
+      "type" : "object",
+      "description" : "MESSAGE SUBSET IDENTIFICATION",
+      "properties" : {
+        "e0115MessageSubsetIdentification01" : {
+          "type" : "string",
+          "description" : "Message subset identification",
+          "maxLength" : 14,
+          "x-position" : "001"
+        },
+        "e0116MessageSubsetVersionNumber02" : {
+          "type" : "string",
+          "description" : "Message subset version number",
+          "maxLength" : 3,
+          "x-position" : "002"
+        },
+        "e0118MessageSubsetReleaseNumber03" : {
+          "type" : "string",
+          "description" : "Message subset release number",
+          "maxLength" : 3,
+          "x-position" : "003"
+        },
+        "e0051ControllingAgencyCoded04" : {
+          "type" : "string",
+          "description" : "Controlling agency, coded",
+          "maxLength" : 3,
+          "x-position" : "004"
+        }
+      },
+      "x-element-order" : [ "e0115MessageSubsetIdentification01", "e0116MessageSubsetVersionNumber02", "e0118MessageSubsetReleaseNumber03", "e0051ControllingAgencyCoded04" ],
+      "required" : [ "e0115MessageSubsetIdentification01" ]
+    },
+    "S017_MessageImplementationGuidelineIdentification" : {
+      "type" : "object",
+      "description" : "MESSAGE IMPLEMENTATION GUIDELINE IDENTIFICATION",
+      "properties" : {
+        "e0121MessageImplementationGuidelineIdentification01" : {
+          "type" : "string",
+          "description" : "Message implementation guideline identification",
+          "maxLength" : 14,
+          "x-position" : "001"
+        },
+        "e0122MessageImplementationGuidelineVersionNumber02" : {
+          "type" : "string",
+          "description" : "Message implementation guideline version number",
+          "maxLength" : 3,
+          "x-position" : "002"
+        },
+        "e0124MessageImplementationGuidelineReleaseNumber03" : {
+          "type" : "string",
+          "description" : "Message implementation guideline release number",
+          "maxLength" : 3,
+          "x-position" : "003"
+        },
+        "e0051ControllingAgencyCoded04" : {
+          "type" : "string",
+          "description" : "Controlling agency, coded",
+          "maxLength" : 3,
+          "x-position" : "004"
+        }
+      },
+      "x-element-order" : [ "e0121MessageImplementationGuidelineIdentification01", "e0122MessageImplementationGuidelineVersionNumber02", "e0124MessageImplementationGuidelineReleaseNumber03", "e0051ControllingAgencyCoded04" ],
+      "required" : [ "e0121MessageImplementationGuidelineIdentification01" ]
+    },
+    "S018_ScenarioIdentification" : {
+      "type" : "object",
+      "description" : "SCENARIO IDENTIFICATION",
+      "properties" : {
+        "e0127ScenarioIdentification01" : {
+          "type" : "string",
+          "description" : "Scenario identification",
+          "maxLength" : 14,
+          "x-position" : "001"
+        },
+        "e0128ScenarioVersionNumber02" : {
+          "type" : "string",
+          "description" : "Scenario version number",
+          "maxLength" : 3,
+          "x-position" : "002"
+        },
+        "e0130ScenarioReleaseNumber03" : {
+          "type" : "string",
+          "description" : "Scenario release number",
+          "maxLength" : 3,
+          "x-position" : "003"
+        },
+        "e0051ControllingAgencyCoded04" : {
+          "type" : "string",
+          "description" : "Controlling agency, coded",
+          "maxLength" : 3,
+          "x-position" : "004"
+        }
+      },
+      "x-element-order" : [ "e0127ScenarioIdentification01", "e0128ScenarioVersionNumber02", "e0130ScenarioReleaseNumber03", "e0051ControllingAgencyCoded04" ],
+      "required" : [ "e0127ScenarioIdentification01" ]
+    },
+    "C002_DocumentMessageName" : {
+      "type" : "object",
+      "description" : "DOCUMENT/MESSAGE NAME",
+      "properties" : {
+        "e1001DocumentNameCode01" : {
+          "type" : "string",
+          "description" : "Document name code",
+          "maxLength" : 3,
+          "x-position" : "001"
+        },
+        "e1131CodeListIdentificationCode02" : {
+          "type" : "string",
+          "description" : "Code list identification code",
+          "maxLength" : 17,
+          "x-position" : "002"
+        },
+        "e3055CodeListResponsibleAgencyCode03" : {
+          "type" : "string",
+          "description" : "Code list responsible agency code",
+          "maxLength" : 3,
+          "x-position" : "003"
+        },
+        "e1000DocumentName04" : {
+          "type" : "string",
+          "description" : "Document name",
+          "maxLength" : 35,
+          "x-position" : "004"
+        }
+      },
+      "x-element-order" : [ "e1001DocumentNameCode01", "e1131CodeListIdentificationCode02", "e3055CodeListResponsibleAgencyCode03", "e1000DocumentName04" ]
+    },
+    "C106_DocumentMessageIdentification" : {
+      "type" : "object",
+      "description" : "DOCUMENT/MESSAGE IDENTIFICATION",
+      "properties" : {
+        "e1004DocumentIdentifier01" : {
+          "type" : "string",
+          "description" : "Document identifier",
+          "maxLength" : 70,
+          "x-position" : "001"
+        },
+        "e1056VersionIdentifier02" : {
+          "type" : "string",
+          "description" : "Version identifier",
+          "maxLength" : 9,
+          "x-position" : "002"
+        },
+        "e1060RevisionIdentifier03" : {
+          "type" : "string",
+          "description" : "Revision identifier",
+          "maxLength" : 6,
+          "x-position" : "003"
+        }
+      },
+      "x-element-order" : [ "e1004DocumentIdentifier01", "e1056VersionIdentifier02", "e1060RevisionIdentifier03" ]
+    },
+    "C507_DateTimePeriod" : {
+      "type" : "object",
+      "description" : "DATE/TIME/PERIOD",
+      "properties" : {
+        "e2005DateOrTimeOrPeriodFunctionCodeQualifier01" : {
+          "type" : "string",
+          "description" : "Date or time or period function code qualifier",
+          "maxLength" : 3,
+          "x-position" : "001"
+        },
+        "e2380DateOrTimeOrPeriodText02" : {
+          "type" : "string",
+          "description" : "Date or time or period text",
+          "maxLength" : 35,
+          "x-position" : "002"
+        },
+        "e2379DateOrTimeOrPeriodFormatCode03" : {
+          "type" : "string",
+          "description" : "Date or time or period format code",
+          "maxLength" : 3,
+          "x-position" : "003"
+        }
+      },
+      "x-element-order" : [ "e2005DateOrTimeOrPeriodFunctionCodeQualifier01", "e2380DateOrTimeOrPeriodText02", "e2379DateOrTimeOrPeriodFormatCode03" ],
+      "required" : [ "e2005DateOrTimeOrPeriodFunctionCodeQualifier01" ]
+    },
+    "C107_TextReference" : {
+      "type" : "object",
+      "description" : "TEXT REFERENCE",
+      "properties" : {
+        "e4441FreeTextDescriptionCode01" : {
+          "type" : "string",
+          "description" : "Free text description code",
+          "maxLength" : 17,
+          "x-position" : "001"
+        },
+        "e1131CodeListIdentificationCode02" : {
+          "type" : "string",
+          "description" : "Code list identification code",
+          "maxLength" : 17,
+          "x-position" : "002"
+        },
+        "e3055CodeListResponsibleAgencyCode03" : {
+          "type" : "string",
+          "description" : "Code list responsible agency code",
+          "maxLength" : 3,
+          "x-position" : "003"
+        }
+      },
+      "x-element-order" : [ "e4441FreeTextDescriptionCode01", "e1131CodeListIdentificationCode02", "e3055CodeListResponsibleAgencyCode03" ],
+      "required" : [ "e4441FreeTextDescriptionCode01" ]
+    },
+    "C108_TextLiteral" : {
+      "type" : "object",
+      "description" : "TEXT LITERAL",
+      "properties" : {
+        "e4440FreeText01" : {
+          "type" : "string",
+          "description" : "Free text",
+          "maxLength" : 512,
+          "x-position" : "001"
+        },
+        "e4440FreeText02" : {
+          "type" : "string",
+          "description" : "Free text",
+          "maxLength" : 512,
+          "x-position" : "002"
+        },
+        "e4440FreeText03" : {
+          "type" : "string",
+          "description" : "Free text",
+          "maxLength" : 512,
+          "x-position" : "003"
+        },
+        "e4440FreeText04" : {
+          "type" : "string",
+          "description" : "Free text",
+          "maxLength" : 512,
+          "x-position" : "004"
+        },
+        "e4440FreeText05" : {
+          "type" : "string",
+          "description" : "Free text",
+          "maxLength" : 512,
+          "x-position" : "005"
+        }
+      },
+      "x-element-order" : [ "e4440FreeText01", "e4440FreeText02", "e4440FreeText03", "e4440FreeText04", "e4440FreeText05" ],
+      "required" : [ "e4440FreeText01" ]
+    },
+    "C270_Control" : {
+      "type" : "object",
+      "description" : "CONTROL",
+      "properties" : {
+        "e6069ControlTotalTypeCodeQualifier01" : {
+          "type" : "string",
+          "description" : "Control total type code qualifier",
+          "maxLength" : 3,
+          "x-position" : "001"
+        },
+        "e6066ControlTotalQuantity02" : {
+          "type" : "string",
+          "description" : "Control total quantity",
+          "maxLength" : 18,
+          "x-position" : "002"
+        },
+        "e6411MeasurementUnitCode03" : {
+          "type" : "string",
+          "description" : "Measurement unit code",
+          "maxLength" : 8,
+          "x-position" : "003"
+        }
+      },
+      "x-element-order" : [ "e6069ControlTotalTypeCodeQualifier01", "e6066ControlTotalQuantity02", "e6411MeasurementUnitCode03" ],
+      "required" : [ "e6069ControlTotalTypeCodeQualifier01", "e6066ControlTotalQuantity02" ]
+    },
+    "C503_DocumentMessageDetails" : {
+      "type" : "object",
+      "description" : "DOCUMENT/MESSAGE DETAILS",
+      "properties" : {
+        "e1004DocumentIdentifier01" : {
+          "type" : "string",
+          "description" : "Document identifier",
+          "maxLength" : 70,
+          "x-position" : "001"
+        },
+        "e1373DocumentStatusCode02" : {
+          "type" : "string",
+          "description" : "Document status code",
+          "maxLength" : 3,
+          "x-position" : "002"
+        },
+        "e1366DocumentSourceDescription03" : {
+          "type" : "string",
+          "description" : "Document source description",
+          "maxLength" : 70,
+          "x-position" : "003"
+        },
+        "e3453LanguageNameCode04" : {
+          "type" : "string",
+          "description" : "Language name code",
+          "maxLength" : 3,
+          "x-position" : "004"
+        },
+        "e1056VersionIdentifier05" : {
+          "type" : "string",
+          "description" : "Version identifier",
+          "maxLength" : 9,
+          "x-position" : "005"
+        },
+        "e1060RevisionIdentifier06" : {
+          "type" : "string",
+          "description" : "Revision identifier",
+          "maxLength" : 6,
+          "x-position" : "006"
+        }
+      },
+      "x-element-order" : [ "e1004DocumentIdentifier01", "e1373DocumentStatusCode02", "e1366DocumentSourceDescription03", "e3453LanguageNameCode04", "e1056VersionIdentifier05", "e1060RevisionIdentifier06" ]
+    },
+    "C506_Reference" : {
+      "type" : "object",
+      "description" : "REFERENCE",
+      "properties" : {
+        "e1153ReferenceCodeQualifier01" : {
+          "type" : "string",
+          "description" : "Reference code qualifier",
+          "maxLength" : 3,
+          "x-position" : "001"
+        },
+        "e1154ReferenceIdentifier02" : {
+          "type" : "string",
+          "description" : "Reference identifier",
+          "maxLength" : 70,
+          "x-position" : "002"
+        },
+        "e1156DocumentLineIdentifier03" : {
+          "type" : "string",
+          "description" : "Document line identifier",
+          "maxLength" : 6,
+          "x-position" : "003"
+        },
+        "e1056VersionIdentifier04" : {
+          "type" : "string",
+          "description" : "Version identifier",
+          "maxLength" : 9,
+          "x-position" : "004"
+        },
+        "e1060RevisionIdentifier05" : {
+          "type" : "string",
+          "description" : "Revision identifier",
+          "maxLength" : 6,
+          "x-position" : "005"
+        }
+      },
+      "x-element-order" : [ "e1153ReferenceCodeQualifier01", "e1154ReferenceIdentifier02", "e1156DocumentLineIdentifier03", "e1056VersionIdentifier04", "e1060RevisionIdentifier05" ],
+      "required" : [ "e1153ReferenceCodeQualifier01" ]
+    },
+    "C082_PartyIdentificationDetails" : {
+      "type" : "object",
+      "description" : "PARTY IDENTIFICATION DETAILS",
+      "properties" : {
+        "e3039PartyIdentifier01" : {
+          "type" : "string",
+          "description" : "Party identifier",
+          "maxLength" : 35,
+          "x-position" : "001"
+        },
+        "e1131CodeListIdentificationCode02" : {
+          "type" : "string",
+          "description" : "Code list identification code",
+          "maxLength" : 17,
+          "x-position" : "002"
+        },
+        "e3055CodeListResponsibleAgencyCode03" : {
+          "type" : "string",
+          "description" : "Code list responsible agency code",
+          "maxLength" : 3,
+          "x-position" : "003"
+        }
+      },
+      "x-element-order" : [ "e3039PartyIdentifier01", "e1131CodeListIdentificationCode02", "e3055CodeListResponsibleAgencyCode03" ],
+      "required" : [ "e3039PartyIdentifier01" ]
+    },
+    "C058_NameAndAddress" : {
+      "type" : "object",
+      "description" : "NAME AND ADDRESS",
+      "properties" : {
+        "e3124NameAndAddressDescription01" : {
+          "type" : "string",
+          "description" : "Name and address description",
+          "maxLength" : 35,
+          "x-position" : "001"
+        },
+        "e3124NameAndAddressDescription02" : {
+          "type" : "string",
+          "description" : "Name and address description",
+          "maxLength" : 35,
+          "x-position" : "002"
+        },
+        "e3124NameAndAddressDescription03" : {
+          "type" : "string",
+          "description" : "Name and address description",
+          "maxLength" : 35,
+          "x-position" : "003"
+        },
+        "e3124NameAndAddressDescription04" : {
+          "type" : "string",
+          "description" : "Name and address description",
+          "maxLength" : 35,
+          "x-position" : "004"
+        },
+        "e3124NameAndAddressDescription05" : {
+          "type" : "string",
+          "description" : "Name and address description",
+          "maxLength" : 35,
+          "x-position" : "005"
+        }
+      },
+      "x-element-order" : [ "e3124NameAndAddressDescription01", "e3124NameAndAddressDescription02", "e3124NameAndAddressDescription03", "e3124NameAndAddressDescription04", "e3124NameAndAddressDescription05" ],
+      "required" : [ "e3124NameAndAddressDescription01" ]
+    },
+    "C080_PartyName" : {
+      "type" : "object",
+      "description" : "PARTY NAME",
+      "properties" : {
+        "e3036PartyName01" : {
+          "type" : "string",
+          "description" : "Party name",
+          "maxLength" : 70,
+          "x-position" : "001"
+        },
+        "e3036PartyName02" : {
+          "type" : "string",
+          "description" : "Party name",
+          "maxLength" : 70,
+          "x-position" : "002"
+        },
+        "e3036PartyName03" : {
+          "type" : "string",
+          "description" : "Party name",
+          "maxLength" : 70,
+          "x-position" : "003"
+        },
+        "e3036PartyName04" : {
+          "type" : "string",
+          "description" : "Party name",
+          "maxLength" : 70,
+          "x-position" : "004"
+        },
+        "e3036PartyName05" : {
+          "type" : "string",
+          "description" : "Party name",
+          "maxLength" : 70,
+          "x-position" : "005"
+        },
+        "e3045PartyNameFormatCode06" : {
+          "type" : "string",
+          "description" : "Party name format code",
+          "maxLength" : 3,
+          "x-position" : "006"
+        }
+      },
+      "x-element-order" : [ "e3036PartyName01", "e3036PartyName02", "e3036PartyName03", "e3036PartyName04", "e3036PartyName05", "e3045PartyNameFormatCode06" ],
+      "required" : [ "e3036PartyName01" ]
+    },
+    "C059_Street" : {
+      "type" : "object",
+      "description" : "STREET",
+      "properties" : {
+        "e3042StreetAndNumberOrPostOfficeBoxIdentifier01" : {
+          "type" : "string",
+          "description" : "Street and number or post office box identifier",
+          "maxLength" : 256,
+          "x-position" : "001"
+        },
+        "e3042StreetAndNumberOrPostOfficeBoxIdentifier02" : {
+          "type" : "string",
+          "description" : "Street and number or post office box identifier",
+          "maxLength" : 256,
+          "x-position" : "002"
+        },
+        "e3042StreetAndNumberOrPostOfficeBoxIdentifier03" : {
+          "type" : "string",
+          "description" : "Street and number or post office box identifier",
+          "maxLength" : 256,
+          "x-position" : "003"
+        },
+        "e3042StreetAndNumberOrPostOfficeBoxIdentifier04" : {
+          "type" : "string",
+          "description" : "Street and number or post office box identifier",
+          "maxLength" : 256,
+          "x-position" : "004"
+        }
+      },
+      "x-element-order" : [ "e3042StreetAndNumberOrPostOfficeBoxIdentifier01", "e3042StreetAndNumberOrPostOfficeBoxIdentifier02", "e3042StreetAndNumberOrPostOfficeBoxIdentifier03", "e3042StreetAndNumberOrPostOfficeBoxIdentifier04" ],
+      "required" : [ "e3042StreetAndNumberOrPostOfficeBoxIdentifier01" ]
+    },
+    "C819_CountrySubdivisionDetails" : {
+      "type" : "object",
+      "description" : "COUNTRY SUBDIVISION DETAILS",
+      "properties" : {
+        "e3229CountrySubdivisionIdentifier01" : {
+          "type" : "string",
+          "description" : "Country subdivision identifier",
+          "maxLength" : 9,
+          "x-position" : "001"
+        },
+        "e1131CodeListIdentificationCode02" : {
+          "type" : "string",
+          "description" : "Code list identification code",
+          "maxLength" : 17,
+          "x-position" : "002"
+        },
+        "e3055CodeListResponsibleAgencyCode03" : {
+          "type" : "string",
+          "description" : "Code list responsible agency code",
+          "maxLength" : 3,
+          "x-position" : "003"
+        },
+        "e3228CountrySubdivisionName04" : {
+          "type" : "string",
+          "description" : "Country subdivision name",
+          "maxLength" : 70,
+          "x-position" : "004"
+        }
+      },
+      "x-element-order" : [ "e3229CountrySubdivisionIdentifier01", "e1131CodeListIdentificationCode02", "e3055CodeListResponsibleAgencyCode03", "e3228CountrySubdivisionName04" ]
+    },
+    "C056_ContactDetails" : {
+      "type" : "object",
+      "description" : "CONTACT DETAILS",
+      "properties" : {
+        "e3413ContactIdentifier01" : {
+          "type" : "string",
+          "description" : "Contact identifier",
+          "maxLength" : 17,
+          "x-position" : "001"
+        },
+        "e3412ContactName02" : {
+          "type" : "string",
+          "description" : "Contact name",
+          "maxLength" : 256,
+          "x-position" : "002"
+        }
+      },
+      "x-element-order" : [ "e3413ContactIdentifier01", "e3412ContactName02" ]
+    },
+    "C076_CommunicationContact" : {
+      "type" : "object",
+      "description" : "COMMUNICATION CONTACT",
+      "properties" : {
+        "e3148CommunicationAddressIdentifier01" : {
+          "type" : "string",
+          "description" : "Communication address identifier",
+          "maxLength" : 512,
+          "x-position" : "001"
+        },
+        "e3155CommunicationMeansTypeCode02" : {
+          "type" : "string",
+          "description" : "Communication means type code",
+          "maxLength" : 3,
+          "x-position" : "002"
+        }
+      },
+      "x-element-order" : [ "e3148CommunicationAddressIdentifier01", "e3155CommunicationMeansTypeCode02" ],
+      "required" : [ "e3148CommunicationAddressIdentifier01", "e3155CommunicationMeansTypeCode02" ]
+    },
+    "C901_ApplicationErrorDetail" : {
+      "type" : "object",
+      "description" : "APPLICATION ERROR DETAIL",
+      "properties" : {
+        "e9321ApplicationErrorCode01" : {
+          "type" : "string",
+          "description" : "Application error code",
+          "maxLength" : 8,
+          "x-position" : "001"
+        },
+        "e1131CodeListIdentificationCode02" : {
+          "type" : "string",
+          "description" : "Code list identification code",
+          "maxLength" : 17,
+          "x-position" : "002"
+        },
+        "e3055CodeListResponsibleAgencyCode03" : {
+          "type" : "string",
+          "description" : "Code list responsible agency code",
+          "maxLength" : 3,
+          "x-position" : "003"
+        }
+      },
+      "x-element-order" : [ "e9321ApplicationErrorCode01", "e1131CodeListIdentificationCode02", "e3055CodeListResponsibleAgencyCode03" ],
+      "required" : [ "e9321ApplicationErrorCode01" ]
+    }
+  }
+}

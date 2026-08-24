@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beanio xmlns="http://www.beanio.org/2012/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <typeHandler class="${compositeTypeHandler}" name="s001Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_S001SyntaxIdentifier"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e0001SyntaxIdentifier01,e0002SyntaxVersionNumber02,e0080ServiceCodeListDirectoryVersionNumber03,e0133CharacterEncodingCoded04,e0076SyntaxReleaseNumber05"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="s002Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_S002InterchangeSender"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e0004InterchangeSenderIdentification01,e0007IdentificationCodeQualifier02,e0008InterchangeSenderInternalIdentification03,e0042InterchangeSenderInternalSubIdentification04"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="s003Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_S003InterchangeRecipient"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e0010InterchangeRecipientIdentification01,e0007IdentificationCodeQualifier02,e0014InterchangeRecipientInternalIdentification03,e0046InterchangeRecipientInternalSubIdentification04"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="s004Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_S004DateAndTimeOfPreparation"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e0017Date01,e0019Time02"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="s005Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_S005RecipientReferencePasswordDetails"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e0022RecipientReferencePassword01,e0025RecipientReferencePasswordQualifier02"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="s009Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_S009MessageIdentifier"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e0065MessageType01,e0052MessageVersionNumber02,e0054MessageReleaseNumber03,e0051ControllingAgencyCoded04,e0057AssociationAssignedCode05,e0110CodeListDirectoryVersionNumber06,e0113MessageTypeSubFunctionIdentification07"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="s010Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_S010StatusOfTheTransfer"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e0070SequenceOfTransfers01,e0073FirstAndLastTransfer02"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="s016Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_S016MessageSubsetIdentification"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e0115MessageSubsetIdentification01,e0116MessageSubsetVersionNumber02,e0118MessageSubsetReleaseNumber03,e0051ControllingAgencyCoded04"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="s017Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_S017MessageImplementationGuidelineIdentification"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e0121MessageImplementationGuidelineIdentification01,e0122MessageImplementationGuidelineVersionNumber02,e0124MessageImplementationGuidelineReleaseNumber03,e0051ControllingAgencyCoded04"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="s018Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_S018ScenarioIdentification"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e0127ScenarioIdentification01,e0128ScenarioVersionNumber02,e0130ScenarioReleaseNumber03,e0051ControllingAgencyCoded04"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c002Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C002DocumentMessageName"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e1001DocumentNameCode01,e1131CodeListIdentificationCode02,e3055CodeListResponsibleAgencyCode03,e1000DocumentName04"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c106Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C106DocumentMessageIdentification"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e1004DocumentIdentifier01,e1056VersionIdentifier02,e1060RevisionIdentifier03"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c507Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C507DateTimePeriod"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e2005DateOrTimeOrPeriodFunctionCodeQualifier01,e2380DateOrTimeOrPeriodText02,e2379DateOrTimeOrPeriodFormatCode03"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c107Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C107TextReference"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e4441FreeTextDescriptionCode01,e1131CodeListIdentificationCode02,e3055CodeListResponsibleAgencyCode03"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c108Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C108TextLiteral"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e4440FreeText01,e4440FreeText02,e4440FreeText03,e4440FreeText04,e4440FreeText05"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c270Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C270Control"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e6069ControlTotalTypeCodeQualifier01,e6066ControlTotalQuantity02,e6411MeasurementUnitCode03"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c503Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C503DocumentMessageDetails"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e1004DocumentIdentifier01,e1373DocumentStatusCode02,e1366DocumentSourceDescription03,e3453LanguageNameCode04,e1056VersionIdentifier05,e1060RevisionIdentifier06"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c506Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C506Reference"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e1153ReferenceCodeQualifier01,e1154ReferenceIdentifier02,e1156DocumentLineIdentifier03,e1056VersionIdentifier04,e1060RevisionIdentifier05"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c082Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C082PartyIdentificationDetails"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e3039PartyIdentifier01,e1131CodeListIdentificationCode02,e3055CodeListResponsibleAgencyCode03"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c058Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C058NameAndAddress"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e3124NameAndAddressDescription01,e3124NameAndAddressDescription02,e3124NameAndAddressDescription03,e3124NameAndAddressDescription04,e3124NameAndAddressDescription05"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c080Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C080PartyName"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e3036PartyName01,e3036PartyName02,e3036PartyName03,e3036PartyName04,e3036PartyName05,e3045PartyNameFormatCode06"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c059Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C059Street"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e3042StreetAndNumberOrPostOfficeBoxIdentifier01,e3042StreetAndNumberOrPostOfficeBoxIdentifier02,e3042StreetAndNumberOrPostOfficeBoxIdentifier03,e3042StreetAndNumberOrPostOfficeBoxIdentifier04"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c819Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C819CountrySubdivisionDetails"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e3229CountrySubdivisionIdentifier01,e1131CodeListIdentificationCode02,e3055CodeListResponsibleAgencyCode03,e3228CountrySubdivisionName04"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c056Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C056ContactDetails"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e3413ContactIdentifier01,e3412ContactName02"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c076Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C076CommunicationContact"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e3148CommunicationAddressIdentifier01,e3155CommunicationMeansTypeCode02"/>
+  </typeHandler>
+  <typeHandler class="${compositeTypeHandler}" name="c901Handler">
+    <property name="targetClass" value="${corePackage}.FlatEdifactD18aAperakStandard_C901ApplicationErrorDetail"/>
+    <property name="componentSeparator" value="${componentSeparator}"/>
+    <property name="fieldNames" value="e9321ApplicationErrorCode01,e1131CodeListIdentificationCode02,e3055CodeListResponsibleAgencyCode03"/>
+  </typeHandler>
+  <template name="UNB">
+    <field ignore="true" literal="UNB" name="tag" position="0" rid="true"/>
+    <field minOccurs="1" name="s001SyntaxIdentifier01" position="1" typeHandler="s001Handler"/>
+    <field minOccurs="1" name="s002InterchangeSender02" position="2" typeHandler="s002Handler"/>
+    <field minOccurs="1" name="s003InterchangeRecipient03" position="3" typeHandler="s003Handler"/>
+    <field minOccurs="1" name="s004DateAndTimeOfPreparation04" position="4" typeHandler="s004Handler"/>
+    <field minOccurs="1" name="e0020InterchangeControlReference05" position="5"/>
+    <field minOccurs="0" name="s005RecipientReferencePasswordDetails06" position="6" typeHandler="s005Handler"/>
+    <field minOccurs="0" name="e0026ApplicationReference07" position="7"/>
+    <field minOccurs="0" name="e0029ProcessingPriorityCode08" position="8"/>
+    <field minOccurs="0" name="e0031AcknowledgementRequest09" position="9"/>
+    <field minOccurs="0" name="e0032InterchangeAgreementIdentifier10" position="10"/>
+    <field minOccurs="0" name="e0035TestIndicator11" position="11"/>
+  </template>
+  <template name="UNH">
+    <field ignore="true" literal="UNH" name="tag" position="0" rid="true"/>
+    <field minOccurs="1" name="e0062MessageReferenceNumber01" position="1"/>
+    <field minOccurs="1" name="s009MessageIdentifier02" position="2" typeHandler="s009Handler"/>
+    <field minOccurs="0" name="e0068CommonAccessReference03" position="3"/>
+    <field minOccurs="0" name="s010StatusOfTheTransfer04" position="4" typeHandler="s010Handler"/>
+    <field minOccurs="0" name="s016MessageSubsetIdentification05" position="5" typeHandler="s016Handler"/>
+    <field minOccurs="0" name="s017MessageImplementationGuidelineIdentification06" position="6" typeHandler="s017Handler"/>
+    <field minOccurs="0" name="s018ScenarioIdentification07" position="7" typeHandler="s018Handler"/>
+  </template>
+  <template name="BGM">
+    <field ignore="true" literal="BGM" name="tag" position="0" rid="true"/>
+    <field minOccurs="0" name="c002DocumentMessageName01" position="1" typeHandler="c002Handler"/>
+    <field minOccurs="0" name="c106DocumentMessageIdentification02" position="2" typeHandler="c106Handler"/>
+    <field minOccurs="0" name="e1225MessageFunctionCode03" position="3"/>
+    <field minOccurs="0" name="e4343ResponseTypeCode04" position="4"/>
+    <field minOccurs="0" name="e1373DocumentStatusCode05" position="5"/>
+    <field minOccurs="0" name="e3453LanguageNameCode06" position="6"/>
+  </template>
+  <template name="DTM">
+    <field ignore="true" literal="DTM" name="tag" position="0" rid="true"/>
+    <field minOccurs="1" name="c507DateTimePeriod01" position="1" typeHandler="c507Handler"/>
+  </template>
+  <template name="FTX">
+    <field ignore="true" literal="FTX" name="tag" position="0" rid="true"/>
+    <field minOccurs="1" name="e4451TextSubjectCodeQualifier01" position="1"/>
+    <field minOccurs="0" name="e4453FreeTextFunctionCode02" position="2"/>
+    <field minOccurs="0" name="c107TextReference03" position="3" typeHandler="c107Handler"/>
+    <field minOccurs="0" name="c108TextLiteral04" position="4" typeHandler="c108Handler"/>
+    <field minOccurs="0" name="e3453LanguageNameCode05" position="5"/>
+    <field minOccurs="0" name="e4447FreeTextFormatCode06" position="6"/>
+  </template>
+  <template name="CNT">
+    <field ignore="true" literal="CNT" name="tag" position="0" rid="true"/>
+    <field minOccurs="1" name="c270Control01" position="1" typeHandler="c270Handler"/>
+  </template>
+  <template name="DOC">
+    <field ignore="true" literal="DOC" name="tag" position="0" rid="true"/>
+    <field minOccurs="1" name="c002DocumentMessageName01" position="1" typeHandler="c002Handler"/>
+    <field minOccurs="0" name="c503DocumentMessageDetails02" position="2" typeHandler="c503Handler"/>
+    <field minOccurs="0" name="e3153CommunicationMediumTypeCode03" position="3"/>
+    <field minOccurs="0" name="e1220DocumentCopiesRequiredQuantity04" position="4"/>
+    <field minOccurs="0" name="e1218DocumentOriginalsRequiredQuantity05" position="5"/>
+  </template>
+  <template name="RFF">
+    <field ignore="true" literal="RFF" name="tag" position="0" rid="true"/>
+    <field minOccurs="1" name="c506Reference01" position="1" typeHandler="c506Handler"/>
+  </template>
+  <template name="NAD">
+    <field ignore="true" literal="NAD" name="tag" position="0" rid="true"/>
+    <field minOccurs="1" name="e3035PartyFunctionCodeQualifier01" position="1"/>
+    <field minOccurs="0" name="c082PartyIdentificationDetails02" position="2" typeHandler="c082Handler"/>
+    <field minOccurs="0" name="c058NameAndAddress03" position="3" typeHandler="c058Handler"/>
+    <field minOccurs="0" name="c080PartyName04" position="4" typeHandler="c080Handler"/>
+    <field minOccurs="0" name="c059Street05" position="5" typeHandler="c059Handler"/>
+    <field minOccurs="0" name="e3164CityName06" position="6"/>
+    <field minOccurs="0" name="c819CountrySubdivisionDetails07" position="7" typeHandler="c819Handler"/>
+    <field minOccurs="0" name="e3251PostalIdentificationCode08" position="8"/>
+    <field minOccurs="0" name="e3207CountryIdentifier09" position="9"/>
+  </template>
+  <template name="CTA">
+    <field ignore="true" literal="CTA" name="tag" position="0" rid="true"/>
+    <field minOccurs="0" name="e3139ContactFunctionCode01" position="1"/>
+    <field minOccurs="0" name="c056ContactDetails02" position="2" typeHandler="c056Handler"/>
+  </template>
+  <template name="COM">
+    <field ignore="true" literal="COM" name="tag" position="0" rid="true"/>
+    <field minOccurs="1" name="c076CommunicationContact01" position="1" typeHandler="c076Handler"/>
+  </template>
+  <template name="ERC">
+    <field ignore="true" literal="ERC" name="tag" position="0" rid="true"/>
+    <field minOccurs="1" name="c901ApplicationErrorDetail01" position="1" typeHandler="c901Handler"/>
+  </template>
+  <template name="UNT">
+    <field ignore="true" literal="UNT" name="tag" position="0" rid="true"/>
+    <field minOccurs="1" name="e0074NumberOfSegmentsInAMessage01" position="1"/>
+    <field minOccurs="1" name="e0062MessageReferenceNumber02" position="2"/>
+  </template>
+  <template name="UNZ">
+    <field ignore="true" literal="UNZ" name="tag" position="0" rid="true"/>
+    <field minOccurs="1" name="e0036InterchangeControlCount01" position="1"/>
+    <field minOccurs="1" name="e0020InterchangeControlReference02" position="2"/>
+  </template>
+  <stream format="delimited" ignoreUnidentifiedRecords="true" name="EDIFACT_D18A_APERAK">
+    <parser class="${recordParser}">
+      <property name="elementSeparator" value="${elementSeparator}"/>
+      <property name="segmentTerminator" value="${segmentTerminator}"/>
+      <property name="releaseCharacter" value="${releaseCharacter}"/>
+    </parser>
+    <group class="${messagePackage}.FlatEdifactD18aAperakStandard" maxOccurs="unbounded" minOccurs="0" name="message">
+      <record class="${corePackage}.FlatEdifactD18aAperakStandard_UnbInterchangeHeader" maxOccurs="1" minOccurs="1" name="unbInterchangeHeader" template="UNB"/>
+      <record class="${corePackage}.FlatEdifactD18aAperakStandard_UnhMessageHeader" maxOccurs="1" minOccurs="1" name="unhMessageHeader" template="UNH"/>
+      <record class="${corePackage}.FlatEdifactD18aAperakStandard_BgmBeginningOfMessage" maxOccurs="1" minOccurs="1" name="bgmBeginningOfMessage" template="BGM"/>
+      <record class="${corePackage}.FlatEdifactD18aAperakStandard_DtmDateTimePeriod" collection="list" maxOccurs="9" minOccurs="0" name="dtmDateTimePeriod" template="DTM"/>
+      <record class="${corePackage}.FlatEdifactD18aAperakStandard_FtxFreeText" collection="list" maxOccurs="9" minOccurs="0" name="ftxFreeText" template="FTX"/>
+      <record class="${corePackage}.FlatEdifactD18aAperakStandard_CntControlTotal" collection="list" maxOccurs="9" minOccurs="0" name="cntControlTotal" template="CNT"/>
+      <group class="${messagePackage}.FlatEdifactD18aAperakStandard_Sg1" collection="list" maxOccurs="99" minOccurs="0" name="sg1">
+        <record class="${corePackage}.FlatEdifactD18aAperakStandard_DocDocumentMessageDetails" maxOccurs="1" minOccurs="1" name="docDocumentMessageDetails" template="DOC"/>
+        <record class="${corePackage}.FlatEdifactD18aAperakStandard_DtmDateTimePeriod" collection="list" maxOccurs="99" minOccurs="0" name="dtmDateTimePeriod" template="DTM"/>
+      </group>
+      <group class="${messagePackage}.FlatEdifactD18aAperakStandard_Sg2" collection="list" maxOccurs="9" minOccurs="0" name="sg2">
+        <record class="${corePackage}.FlatEdifactD18aAperakStandard_RffReference" maxOccurs="1" minOccurs="1" name="rffReference" template="RFF"/>
+        <record class="${corePackage}.FlatEdifactD18aAperakStandard_DtmDateTimePeriod" collection="list" maxOccurs="9" minOccurs="0" name="dtmDateTimePeriod" template="DTM"/>
+      </group>
+      <group class="${messagePackage}.FlatEdifactD18aAperakStandard_Sg3" collection="list" maxOccurs="9" minOccurs="0" name="sg3">
+        <record class="${corePackage}.FlatEdifactD18aAperakStandard_NadNameAndAddress" maxOccurs="1" minOccurs="1" name="nadNameAndAddress" template="NAD"/>
+        <record class="${corePackage}.FlatEdifactD18aAperakStandard_CtaContactInformation" collection="list" maxOccurs="9" minOccurs="0" name="ctaContactInformation" template="CTA"/>
+        <record class="${corePackage}.FlatEdifactD18aAperakStandard_ComCommunicationContact" collection="list" maxOccurs="9" minOccurs="0" name="comCommunicationContact" template="COM"/>
+      </group>
+      <group class="${messagePackage}.FlatEdifactD18aAperakStandard_Sg4" collection="list" maxOccurs="unbounded" minOccurs="0" name="sg4">
+        <record class="${corePackage}.FlatEdifactD18aAperakStandard_ErcApplicationErrorInformation" maxOccurs="1" minOccurs="1" name="ercApplicationErrorInformation" template="ERC"/>
+        <record class="${corePackage}.FlatEdifactD18aAperakStandard_FtxFreeText" maxOccurs="1" minOccurs="0" name="ftxFreeText" template="FTX"/>
+        <group class="${messagePackage}.FlatEdifactD18aAperakStandard_Sg5" collection="list" maxOccurs="9" minOccurs="0" name="sg5">
+          <record class="${corePackage}.FlatEdifactD18aAperakStandard_RffReference" maxOccurs="1" minOccurs="1" name="rffReference" template="RFF"/>
+          <record class="${corePackage}.FlatEdifactD18aAperakStandard_FtxFreeText" collection="list" maxOccurs="9" minOccurs="0" name="ftxFreeText" template="FTX"/>
+        </group>
+      </group>
+      <record class="${corePackage}.FlatEdifactD18aAperakStandard_UntMessageTrailer" maxOccurs="1" minOccurs="1" name="untMessageTrailer" template="UNT"/>
+      <record class="${corePackage}.FlatEdifactD18aAperakStandard_UnzInterchangeTrailer" maxOccurs="1" minOccurs="1" name="unzInterchangeTrailer" template="UNZ"/>
+    </group>
+  </stream>
+</beanio>

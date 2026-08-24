@@ -1,0 +1,296 @@
+{
+  "Min" : "1",
+  "Max" : "1",
+  "Scope" : "Used",
+  "Position" : "0000",
+  "Segment" : "UNB",
+  "Name" : "INTERCHANGE HEADER",
+  "Description" : "Interchange envelope: UNB",
+  "Requirement" : "Mandatory",
+  "Elements" : [ {
+    "Scope" : "Used",
+    "Position" : "010",
+    "Element" : "S001",
+    "Name" : "SYNTAX IDENTIFIER",
+    "Description" : "SYNTAX IDENTIFIER",
+    "Requirement" : "Mandatory",
+    "Type" : "Composite (composite)",
+    "Min" : "",
+    "Max" : "",
+    "Elements" : [ {
+      "Scope" : "Used",
+      "Position" : "010001",
+      "Element" : "0001",
+      "Name" : "Syntax identifier",
+      "Description" : "Syntax identifier",
+      "Requirement" : "Mandatory",
+      "Type" : "A",
+      "Min" : "4",
+      "Max" : "4"
+    }, {
+      "Scope" : "Used",
+      "Position" : "010002",
+      "Element" : "0002",
+      "Name" : "Syntax version number",
+      "Description" : "Syntax version number",
+      "Requirement" : "Mandatory",
+      "Type" : "String (AN)",
+      "Min" : "1",
+      "Max" : "1"
+    }, {
+      "Scope" : "Used",
+      "Position" : "010003",
+      "Element" : "0080",
+      "Name" : "Service code list directory version number",
+      "Description" : "Service code list directory version number",
+      "Requirement" : "Conditional",
+      "Type" : "String (AN)",
+      "Min" : "1",
+      "Max" : "6"
+    }, {
+      "Scope" : "Used",
+      "Position" : "010004",
+      "Element" : "0133",
+      "Name" : "Character encoding, coded",
+      "Description" : "Character encoding, coded",
+      "Requirement" : "Conditional",
+      "Type" : "String (AN)",
+      "Min" : "1",
+      "Max" : "3"
+    }, {
+      "Scope" : "Used",
+      "Position" : "010005",
+      "Element" : "0076",
+      "Name" : "Syntax release number",
+      "Description" : "Syntax release number",
+      "Requirement" : "Conditional",
+      "Type" : "String (AN)",
+      "Min" : "2",
+      "Max" : "2"
+    } ]
+  }, {
+    "Scope" : "Used",
+    "Position" : "020",
+    "Element" : "S002",
+    "Name" : "INTERCHANGE SENDER",
+    "Description" : "INTERCHANGE SENDER",
+    "Requirement" : "Mandatory",
+    "Type" : "Composite (composite)",
+    "Min" : "",
+    "Max" : "",
+    "Elements" : [ {
+      "Scope" : "Used",
+      "Position" : "020001",
+      "Element" : "0004",
+      "Name" : "Interchange sender identification",
+      "Description" : "Interchange sender identification",
+      "Requirement" : "Mandatory",
+      "Type" : "String (AN)",
+      "Min" : "1",
+      "Max" : "35"
+    }, {
+      "Scope" : "Used",
+      "Position" : "020002",
+      "Element" : "0007",
+      "Name" : "Identification code qualifier",
+      "Description" : "Identification code qualifier",
+      "Requirement" : "Conditional",
+      "Type" : "String (AN)",
+      "Min" : "1",
+      "Max" : "4"
+    }, {
+      "Scope" : "Used",
+      "Position" : "020003",
+      "Element" : "0008",
+      "Name" : "Interchange sender internal identification",
+      "Description" : "Interchange sender internal identification",
+      "Requirement" : "Conditional",
+      "Type" : "String (AN)",
+      "Min" : "1",
+      "Max" : "35"
+    }, {
+      "Scope" : "Used",
+      "Position" : "020004",
+      "Element" : "0042",
+      "Name" : "Interchange sender internal sub-identification",
+      "Description" : "Interchange sender internal sub-identification",
+      "Requirement" : "Conditional",
+      "Type" : "String (AN)",
+      "Min" : "1",
+      "Max" : "35"
+    } ]
+  }, {
+    "Scope" : "Used",
+    "Position" : "030",
+    "Element" : "S003",
+    "Name" : "INTERCHANGE RECIPIENT",
+    "Description" : "INTERCHANGE RECIPIENT",
+    "Requirement" : "Mandatory",
+    "Type" : "Composite (composite)",
+    "Min" : "",
+    "Max" : "",
+    "Elements" : [ {
+      "Scope" : "Used",
+      "Position" : "030001",
+      "Element" : "0010",
+      "Name" : "Interchange recipient identification",
+      "Description" : "Interchange recipient identification",
+      "Requirement" : "Mandatory",
+      "Type" : "String (AN)",
+      "Min" : "1",
+      "Max" : "35"
+    }, {
+      "Scope" : "Used",
+      "Position" : "030002",
+      "Element" : "0007",
+      "Name" : "Identification code qualifier",
+      "Description" : "Identification code qualifier",
+      "Requirement" : "Conditional",
+      "Type" : "String (AN)",
+      "Min" : "1",
+      "Max" : "4"
+    }, {
+      "Scope" : "Used",
+      "Position" : "030003",
+      "Element" : "0014",
+      "Name" : "Interchange recipient internal identification",
+      "Description" : "Interchange recipient internal identification",
+      "Requirement" : "Conditional",
+      "Type" : "String (AN)",
+      "Min" : "1",
+      "Max" : "35"
+    }, {
+      "Scope" : "Used",
+      "Position" : "030004",
+      "Element" : "0046",
+      "Name" : "Interchange recipient internal sub-identification",
+      "Description" : "Interchange recipient internal sub-identification",
+      "Requirement" : "Conditional",
+      "Type" : "String (AN)",
+      "Min" : "1",
+      "Max" : "35"
+    } ]
+  }, {
+    "Scope" : "Used",
+    "Position" : "040",
+    "Element" : "S004",
+    "Name" : "DATE AND TIME OF PREPARATION",
+    "Description" : "DATE AND TIME OF PREPARATION",
+    "Requirement" : "Mandatory",
+    "Type" : "Composite (composite)",
+    "Min" : "",
+    "Max" : "",
+    "Elements" : [ {
+      "Scope" : "Used",
+      "Position" : "040001",
+      "Element" : "0017",
+      "Name" : "Date",
+      "Description" : "Date",
+      "Requirement" : "Mandatory",
+      "Type" : "Numeric (N)",
+      "Min" : "8",
+      "Max" : "8"
+    }, {
+      "Scope" : "Used",
+      "Position" : "040002",
+      "Element" : "0019",
+      "Name" : "Time",
+      "Description" : "Time",
+      "Requirement" : "Mandatory",
+      "Type" : "Numeric (N)",
+      "Min" : "4",
+      "Max" : "4"
+    } ]
+  }, {
+    "Scope" : "Used",
+    "Position" : "050",
+    "Element" : "0020",
+    "Name" : "INTERCHANGE CONTROL REFERENCE",
+    "Description" : "INTERCHANGE CONTROL REFERENCE",
+    "Requirement" : "Mandatory",
+    "Type" : "String (AN)",
+    "Min" : "1",
+    "Max" : "14"
+  }, {
+    "Scope" : "Used",
+    "Position" : "060",
+    "Element" : "S005",
+    "Name" : "RECIPIENT REFERENCE/PASSWORD DETAILS",
+    "Description" : "RECIPIENT REFERENCE/PASSWORD DETAILS",
+    "Requirement" : "Conditional",
+    "Type" : "Composite (composite)",
+    "Min" : "",
+    "Max" : "",
+    "Elements" : [ {
+      "Scope" : "Used",
+      "Position" : "060001",
+      "Element" : "0022",
+      "Name" : "Recipient reference/password",
+      "Description" : "Recipient reference/password",
+      "Requirement" : "Mandatory",
+      "Type" : "String (AN)",
+      "Min" : "1",
+      "Max" : "14"
+    }, {
+      "Scope" : "Used",
+      "Position" : "060002",
+      "Element" : "0025",
+      "Name" : "Recipient reference/password qualifier",
+      "Description" : "Recipient reference/password qualifier",
+      "Requirement" : "Conditional",
+      "Type" : "String (AN)",
+      "Min" : "2",
+      "Max" : "2"
+    } ]
+  }, {
+    "Scope" : "Used",
+    "Position" : "070",
+    "Element" : "0026",
+    "Name" : "APPLICATION REFERENCE",
+    "Description" : "APPLICATION REFERENCE",
+    "Requirement" : "Conditional",
+    "Type" : "String (AN)",
+    "Min" : "1",
+    "Max" : "14"
+  }, {
+    "Scope" : "Used",
+    "Position" : "080",
+    "Element" : "0029",
+    "Name" : "PROCESSING PRIORITY CODE",
+    "Description" : "PROCESSING PRIORITY CODE",
+    "Requirement" : "Conditional",
+    "Type" : "A",
+    "Min" : "1",
+    "Max" : "1"
+  }, {
+    "Scope" : "Used",
+    "Position" : "090",
+    "Element" : "0031",
+    "Name" : "ACKNOWLEDGEMENT REQUEST",
+    "Description" : "ACKNOWLEDGEMENT REQUEST",
+    "Requirement" : "Conditional",
+    "Type" : "Numeric (N)",
+    "Min" : "1",
+    "Max" : "1"
+  }, {
+    "Scope" : "Used",
+    "Position" : "100",
+    "Element" : "0032",
+    "Name" : "INTERCHANGE AGREEMENT IDENTIFIER",
+    "Description" : "INTERCHANGE AGREEMENT IDENTIFIER",
+    "Requirement" : "Conditional",
+    "Type" : "String (AN)",
+    "Min" : "1",
+    "Max" : "35"
+  }, {
+    "Scope" : "Used",
+    "Position" : "110",
+    "Element" : "0035",
+    "Name" : "TEST INDICATOR",
+    "Description" : "TEST INDICATOR",
+    "Requirement" : "Conditional",
+    "Type" : "Numeric (N)",
+    "Min" : "1",
+    "Max" : "1"
+  } ]
+}

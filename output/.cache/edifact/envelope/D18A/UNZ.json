@@ -1,0 +1,31 @@
+{
+  "Min" : "1",
+  "Max" : "1",
+  "Scope" : "Used",
+  "Position" : "0000",
+  "Segment" : "UNZ",
+  "Name" : "INTERCHANGE TRAILER",
+  "Description" : "Interchange envelope: UNZ",
+  "Requirement" : "Mandatory",
+  "Elements" : [ {
+    "Scope" : "Used",
+    "Position" : "010",
+    "Element" : "0036",
+    "Name" : "INTERCHANGE CONTROL COUNT",
+    "Description" : "INTERCHANGE CONTROL COUNT",
+    "Requirement" : "Mandatory",
+    "Type" : "Numeric (N)",
+    "Min" : "1",
+    "Max" : "6"
+  }, {
+    "Scope" : "Used",
+    "Position" : "020",
+    "Element" : "0020",
+    "Name" : "INTERCHANGE CONTROL REFERENCE",
+    "Description" : "INTERCHANGE CONTROL REFERENCE",
+    "Requirement" : "Mandatory",
+    "Type" : "String (AN)",
+    "Min" : "1",
+    "Max" : "14"
+  } ]
+}
